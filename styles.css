@@ -1,0 +1,327 @@
+/* General styling for the body */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Video styling */
+#background-video {
+    width: 100vw;
+    height: 100vh; /* Video covers the entire viewport height */
+    object-fit: cover; /* Cover the entire area */
+    position: absolute; /* Position the video absolutely */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Keep the video behind other content */
+}
+
+/* New content container */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center content vertically */
+    position: relative; /* Positioning context for z-index */
+    z-index: 1; /* Bring the text in front */
+    text-align: center;
+    padding-top: 37vh; /* Move content down to be below the video */
+}
+
+
+/* Heading styling */
+h1 {
+    font-size: 3em;
+    margin: 20px 0; /* Space above and below the text */
+}
+
+/* Scroll down section styling */
+.scroll-down {
+    margin-top: 20px; /* Space between heading and scroll arrow */
+}
+
+.scroll-down .first-arrow {
+    font-size: 2.5em; /* Size of the down arrow */
+    animation: bounce 1.5s infinite; /* Bouncing effect */
+}
+
+/* Bounce animation for the arrow */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(10px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+}
+
+/* Intro section styling */
+#intro-section {
+    background-color: #000;
+    color: white;
+    padding: 20px; /* Adjust padding */
+    margin-top: -280px; /* Move the intro section up */
+    text-align: center;
+}
+
+/* Colorful heading styling */
+.colorful-heading {
+    font-size: 3em;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient from peach to yellow */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text fill transparent */
+}
+
+/* Intro section paragraphs styling */
+#intro-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* General section styling */
+section {
+    background-color: #000; /* Dark background for contrast */
+    color: white;
+    padding: 20px; /* Padding for the sections */
+    text-align: center; /* Center text */
+    margin-bottom: 30px; /* Space between sections */
+}
+
+/* Heading styling for sections */
+section h2 {
+    font-size: 2.5em; /* Size of the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Reduce font size */
+    }
+
+    .scroll-down .arrow {
+        font-size: 2em; /* Adjust arrow size */
+    }
+
+    #intro-section h2 {
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    #intro-section p {
+        font-size: 1.1em; /* Adjust paragraph size */
+    }
+
+    section h2 {
+        font-size: 2em; /* Adjust heading size for smaller screens */
+    }
+
+    .skill-tag {
+        font-size: 1em; /* Adjust tag size for smaller screens */
+        padding: 8px 12px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Further reduce font size */
+    }
+
+    .scroll-down .arrow {
+        font-size: 1.8em; /* Further adjust arrow size */
+    }
+
+    #intro-section h2 {
+        font-size: 1.8em; /* Further adjust heading size */
+    }
+
+    #intro-section p {
+        font-size: 1em; /* Further adjust paragraph size */
+    }
+
+    section h2 {
+        font-size: 1.8em; /* Further adjust heading size */
+    }
+
+    .skill-tag {
+        font-size: 0.9em; /* Further adjust tag size */
+        padding: 6px 10px; /* Further adjust padding */
+    }
+}
+
+/* Skills section styling */
+#skills-section {
+    background-color: #000; /* Dark background for the section */
+    color: white;
+    padding: 20px; /* Padding around the section */
+    text-align: center; /* Center text */
+}
+
+#skills-section h1 {
+    font-size: 2.5em; /* Main title font size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+#skills-section h2 {
+    font-size: 2em; /* Subsection title font size */
+    margin: 20px 0; /* Space above and below subsection titles */
+}
+
+/* Container for skill tags */
+.skills-container {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center align items */
+    gap: 15px; /* Space between tags */
+}
+
+/* Individual skill tag styling */
+.skill-tag {
+    background-color: black; /* Black text color */
+    padding: 10px 15px; /* Padding inside tags */
+    border-radius: 20px; /* Rounded corners */
+    border: 2px solid transparent; /* Transparent border initially */
+    font-size: 1.2em; /* Font size for tags */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Different colors for each tag */
+#languages-section .skill-tag:nth-child(1),
+#tools-section .skill-tag:nth-child(1) { border-color: #4285f4; }
+#languages-section .skill-tag:nth-child(2),
+#tools-section .skill-tag:nth-child(2) { border-color: #34a853; }
+#languages-section .skill-tag:nth-child(3),
+#tools-section .skill-tag:nth-child(3) { border-color: #fbbc05; }
+#languages-section .skill-tag:nth-child(4),
+#tools-section .skill-tag:nth-child(4) { border-color: #ea4335; }
+#languages-section .skill-tag:nth-child(5),
+#tools-section .skill-tag:nth-child(5) { border-color: #4285f4; }
+#languages-section .skill-tag:nth-child(6),
+#tools-section .skill-tag:nth-child(6) { border-color: #34a853; }
+#languages-section .skill-tag:nth-child(7),
+#tools-section .skill-tag:nth-child(7) { border-color: #fbbc05; }
+#languages-section .skill-tag:nth-child(8),
+#tools-section .skill-tag:nth-child(8) { border-color: #ea4335; }
+#languages-section .skill-tag:nth-child(9){ border-color: #4285f4; }
+#languages-section .skill-tag:nth-child(10){ border-color: #34a853; }
+
+/* Hover effect for skill tags */
+.skill-tag:hover {
+    background-color: inherit; /* Use the existing background */
+    color: white; /* Change text color to white */
+}
+
+/* Set background colors on hover using JavaScript */
+.skill-tag:nth-child(1):hover { background-color: #4285f4; }
+.skill-tag:nth-child(2):hover { background-color: #34a853; }
+.skill-tag:nth-child(3):hover { background-color: #fbbc05; }
+.skill-tag:nth-child(4):hover { background-color: #ea4335; }
+.skill-tag:nth-child(5):hover { background-color: #4285f4; }
+.skill-tag:nth-child(6):hover { background-color: #34a853; }
+.skill-tag:nth-child(7):hover { background-color: #fbbc05; }
+.skill-tag:nth-child(8):hover { background-color: #ea4335; }
+
+/* Experience section styling */
+#experience-section {
+    background-color: #000; /* Dark background for the section */
+    color: white; /* Text color */
+    padding: 40px; /* Padding for the section */
+    text-align: center; /* Center text */
+    position: relative; /* Positioning context for arrows */
+}
+
+#experience-section h1 {
+    font-size: 2.5em; /* Main title font size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.experience-card {
+    display: none; /* Hide all cards by default */
+    background-color: #211F1F; /* Slightly lighter background for cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    padding: 20px; /* Padding inside the cards */
+    margin: 20px auto; /* Center the cards and space out */
+    max-width: 700px; /* Maximum width for the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: 3px solid transparent; /* Initial transparent border */
+}
+
+/* Outline colors for each experience card */
+.experience-card:nth-child(1) {
+    border-color: #4285f4; /* Blue */
+}
+
+.experience-card:nth-child(2) {
+    border-color: #34a853; /* Green */
+}
+
+.experience-card:nth-child(3) {
+    border-color: #fbbc05; /* Yellow */
+}
+
+/* Active card styling */
+.experience-card.active {
+    display: block; /* Show only the active card */
+}
+
+.experience-card.active {
+    display: block; /* Show only the active card */
+}
+
+.arrow {
+    font-size: 2em; /* Size of the arrow icons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: white; /* Arrow color */
+    position: absolute; /* Position arrows absolutely */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for true center */
+    border-radius: 50%; /* Round shape for the arrow button */
+    padding: 10px; /* Padding around the arrows */
+}
+
+.left-arrow {
+    left: 500px; /* Position left arrow closer to the center */
+}
+
+.right-arrow {
+    right: 500px; /* Position right arrow closer to the center */
+}
+
+
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    #experience-section h1 {
+        font-size: 2em; /* Reduce font size for smaller screens */
+    }
+
+    .experience-card {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .arrow {
+        font-size: 1.5em; /* Adjust arrow size for smaller screens */
+        padding: 8px; /* Adjust padding for arrows */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #experience-section h1 {
+        font-size: 1.5em; /* Further reduce font size */
+    }
+
+    .experience-card {
+        padding: 10px; /* Further adjust padding for cards */
+    }
+
+    .arrow {
+        font-size: 1.2em; /* Further adjust arrow size */
+        padding: 6px; /* Further adjust padding for arrows */
+    }
+}
