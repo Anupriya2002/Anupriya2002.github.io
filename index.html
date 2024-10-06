@@ -3,21 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-    </style>
+    <title>Hello World with Video</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <!-- Video element with looping -->
+    <video autoplay muted loop id="background-video">
+        <source src="Hello.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- New section for the content below the video -->
+    <div class="content">
+        <!-- Heading below the video -->
+        <h1>I'm Anupriya.</h1>
+
+        <!-- Scroll down arrow section -->
+        <div class="scroll-down">
+            <div class="first-arrow">&#8595;</div> 
+        </div>
+    </div>
+
+    <!-- New section for the introduction -->
+    <section id="intro-section">
+        <h2 class="colorful-heading">Hello!</h2>
+        <p>I’m Anupriya. I’m a 4th year Computer Science student at Ontario Tech University, set to be graduating next spring in April 2025 🌸.</p>
+        <p>I'm an aspiring product manager and have previously worked at RBC Capital Markets on the RBC Clear platform as a product manager intern and at PwC as a Products and Technology Associate.</p>
+        <p>In my spare time, I enjoy reading, hiking, exploring new music, trying new food and hanging out with friends.</p>
+        <p>Welcome to my little corner of the internet! 👋</p>
+    </section>
+
+    <!-- New section for languages & frameworks -->
+    <!-- Main Skills Section -->
+    <section id="skills-section">
+        <h1>SKILLS</h1> <!-- Main title for the section -->
+        
+        <!-- Languages & Frameworks Subsection -->
+        <section id="languages-section">
+            <h2>Languages & Frameworks</h2>
+            <div class="skills-container">
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">C++</div>
+                <div class="skill-tag">C#</div>
+                <div class="skill-tag">C</div>
+                <div class="skill-tag">HTML</div>
+                <div class="skill-tag">CSS</div>
+                <div class="skill-tag">Selenium</div>
+                <div class="skill-tag">SQL</div>
+                <div class="skill-tag">Numpy</div>
+            </div>
+        </section>
+
+        <!-- Tools and Design Subsection -->
+        <section id="tools-section">
+            <h2>Tools and Design</h2>
+            <div class="skills-container">
+                <div class="skill-tag">Figma</div>
+                <div class="skill-tag">Azure DevOps</div>
+                <div class="skill-tag">Miro</div>
+                <div class="skill-tag">Canva</div>
+                <div class="skill-tag">Jira</div>
+                <div class="skill-tag">Confluence</div>
+                <div class="skill-tag">Mural</div>
+                <div class="skill-tag">Retool</div>
+            </div>
+        </section>
+    </section>
+
+
+    <section id="experience-section">
+        <h1> EXPERIENCE</h1>
+        
+    
+        <div class="experience-card active">
+            <h3>Product Manager Intern at RBC Capital Markets</h3>
+            <p>Worked on the RBC Clear platform, helping to streamline processes and improve user experience.</p>
+        </div>
+    
+        <div class="experience-card">
+            <h3>Products and Technology Associate at PwC</h3>
+            <p>Assisted in various projects related to product development and technology solutions.</p>
+        </div>
+    
+        <div class="experience-card">
+            <h3>Intern at ABC Tech</h3>
+            <p>Contributed to the development of a mobile application that improved customer engagement.</p>
+        </div>
+
+        <div class="arrow left-arrow" onclick="changeExperience(-1)">&#10094;</div>
+        <div class="arrow right-arrow" onclick="changeExperience(1)">&#10095;</div>
+    </section>
+    
+    <script src="script.js"></script>
+
+    <section id="project-section"></section>
+        <h1>PROJECTS AND ACTIVITIES</h1>
+
+    </section>
+    
+    
+
 </body>
 </html>
