@@ -3,106 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World with Video</title>
+    <title>Anupriya's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Video element with looping -->
-    <video autoplay muted loop id="background-video">
-        <source src="Hello.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <nav id="side-nav">
+        <ul>
+            <li><a href="#about" title="About"><i class="fas fa-user"></i></a></li>
+            <li><a href="#skills" title="Skills"><i class="fas fa-cogs"></i></a></li>
+            <li><a href="#experience" title="Experience"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="#projects" title="Projects"><i class="fas fa-project-diagram"></i></a></li>
+            <li><a href="#interests" title="Interests"><i class="fas fa-heart"></i></a></li>
+        </ul>
+    </nav>
 
-    <!-- New section for the content below the video -->
-    <div class="content">
-        <!-- Heading below the video -->
-        <h1>I'm Anupriya.</h1>
-
-        <!-- Scroll down arrow section -->
-        <div class="scroll-down">
-            <div class="first-arrow">&#8595;</div> 
+    <header>
+        <video autoplay loop muted playsinline playsinline>
+            <source src="Hello.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Hi, I'm <span id="typed-text"></span><span class="cursor">|</span></h1>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <a href="mailto:your.email@example.com" aria-label="Email Me">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+            </a>
         </div>
-    </div>
+    </header>
 
-    <!-- New section for the introduction -->
-    <section id="intro-section">
-        <h2 class="colorful-heading">Hello!</h2>
-        <p>I’m Anupriya. I’m a 4th year Computer Science student at Ontario Tech University, set to be graduating next spring in April 2025 🌸.</p>
-        <p>I'm an aspiring product manager and have previously worked at RBC Capital Markets on the RBC Clear platform as a product manager intern and at PwC as a Products and Technology Associate.</p>
-        <p>In my spare time, I enjoy reading, hiking, exploring new music, trying new food and hanging out with friends.</p>
-        <p>Welcome to my little corner of the internet! 👋</p>
-    </section>
-
-    <!-- New section for languages & frameworks -->
-    <!-- Main Skills Section -->
-    <section id="skills-section">
-        <h1>SKILLS</h1> <!-- Main title for the section -->
-        
-        <!-- Languages & Frameworks Subsection -->
-        <section id="languages-section">
-            <h2>Languages & Frameworks</h2>
-            <div class="skills-container">
-                <div class="skill-tag">Java</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">C++</div>
-                <div class="skill-tag">C#</div>
-                <div class="skill-tag">C</div>
-                <div class="skill-tag">HTML</div>
-                <div class="skill-tag">CSS</div>
-                <div class="skill-tag">Selenium</div>
-                <div class="skill-tag">SQL</div>
-                <div class="skill-tag">Numpy</div>
+    <main>
+        <section id="about" class="card">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="section-content">
+                    <div class="horizontal-line"></div>
+                    <div class="about-content">
+                        <p class="intro">Hey! I'm Anupriya.</p>
+                        <p>I'm a 4th year Computer Science student at Ontario Tech University, set to be graduating next spring in April 2025 🌸.</p>
+                        <p>I'm an aspiring product manager and have previously worked at RBC Capital Markets on the RBC Clear platform as a product manager intern and at PwC as a Products and Technology Associate.</p>
+                        <p>In my spare time, I enjoy reading, hiking, exploring new music, trying new food (scroll down to see some of my food escapades 📸) and hanging out with friends.</p>
+                        <p class="welcome">Welcome to my little corner of the internet! 👋</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Tools and Design Subsection -->
-        <section id="tools-section">
-            <h2>Tools and Design</h2>
-            <div class="skills-container">
-                <div class="skill-tag">Figma</div>
-                <div class="skill-tag">Azure DevOps</div>
-                <div class="skill-tag">Miro</div>
-                <div class="skill-tag">Canva</div>
-                <div class="skill-tag">Jira</div>
-                <div class="skill-tag">Confluence</div>
-                <div class="skill-tag">Mural</div>
-                <div class="skill-tag">Retool</div>
+        <section id="skills" class="card">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="section-content">
+                    <div class="horizontal-line"></div>
+                    <p class="skills-intro">Here are all the tools and languages that I've worked with before!</p>
+                    <div class="skills-category">
+                        <h3>Languages & Frameworks</h3>
+                        <div class="skills-grid">
+                            <div class="skill">Java</div>
+                            <div class="skill">Python</div>
+                            <div class="skill">C++</div>
+                            <div class="skill">C#</div>
+                            <div class="skill">C</div>
+                            <div class="skill">HTML</div>
+                            <div class="skill">CSS</div>
+                            <div class="skill">Selenium</div>
+                            <div class="skill">SQL</div>
+                            <div class="skill">Numpy</div>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Tools & Design</h3>
+                        <div class="skills-grid">
+                            <div class="skill">Figma</div>
+                            <div class="skill">Azure DevOps</div>
+                            <div class="skill">Miro</div>
+                            <div class="skill">Canva</div>
+                            <div class="skill">Jira</div>
+                            <div class="skill">Confluence</div>
+                            <div class="skill">Mural</div>
+                            <div class="skill">Retool</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-    </section>
 
+        <section id="experience" class="card light-section">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="section-content">
+                    <div class="horizontal-line"></div>
+                    <div class="experience-item">
+                        <h3>Product Manager Intern</h3>
+                        <p class="company">RBC Capital Markets - RBC Clear</p>
+                        <p class="duration">Jan 2024 - Aug 2024 | Toronto, Canada</p>
+                        <ul>
+                            <li>Worked on the Payments team as a product manager, helping develop payment processing solutions such as Wires and ACH.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>UI/UX Designer</h3>
+                        <p class="company">Develop for Good</p>
+                        <p class="duration">Nov 2023 - Mar 2024 | Remote</p>
+                        <ul>
+                            <li>Developed a PRD outlining target market, client pain points, and feature requirements, incorporating client feedback and data insights to enhance designs, increasing client satisfaction by 20%.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Products & Technology Associate</h3>
+                        <p class="company">PricewaterhouseCoopers LLC</p>
+                        <p class="duration">May 2022 - Dec 2022 | Toronto, Canada</p>
+                        <ul>
+                            <li>Automated 280 test cases, streamlining QA processes and saving about 50+ hours and $3,125 monthly, while enhancing product usability and reliability for the Sightline Application.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="experience-section">
-        <h1> EXPERIENCE</h1>
-        
-    
-        <div class="experience-card active">
-            <h3>Product Manager Intern at RBC Capital Markets</h3>
-            <p>Worked on the RBC Clear platform, helping to streamline processes and improve user experience.</p>
-        </div>
-    
-        <div class="experience-card">
-            <h3>Products and Technology Associate at PwC</h3>
-            <p>Assisted in various projects related to product development and technology solutions.</p>
-        </div>
-    
-        <div class="experience-card">
-            <h3>Intern at ABC Tech</h3>
-            <p>Contributed to the development of a mobile application that improved customer engagement.</p>
-        </div>
+        <section id="projects" class="card light-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="section-content">
+                    <div class="horizontal-line"></div>
+                    <div class="projects-carousel">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="hike.png" alt="HikeAI Project">
+                            </div>
+                            <div class="project-content">
+                                <h3>HikeAI: Course Map Requirement Assistant</h3>
+                                <p class="project-meta">Undergraduate Thesis | Sept 2024 - Present</p>
+                                <p>Currently creating a GPT-powered Course Map Requirement Assistant to simplify program maps, helping students meet graduation requirements and reduce delays in graduation.</p>
+                                <p class="project-update">Project prototype coming soon!</p>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="team 188.jpg" alt="FIRST Robotics Project">
+                            </div>
+                            <div class="project-content">
+                                <h3>FIRST Robotics - Team 188</h3>
+                                <p class="project-meta">Outreach and Public Relations Mentor | 2020 - Present</p>
+                                <p>Led outreach initiatives that secured a $2,000 sponsorship and inspired STEM interest in 300+ students globally, guiding the team to win the prestigious Engineering Inspiration Award.</p>
+                                <a href="https://www.team188.com/" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="project-link">Visit Team 188 Website</a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="ev.jpg" alt="Experience Ventures Hackathon">
+                            </div>
+                            <div class="project-content">
+                                <h3>Experience Ventures National Hackathon</h3>
+                                <p class="project-meta">Consumer Relations Lead | Jan 2023 - Mar 2023</p>
+                                <p>Won 2nd Place Nationally in Entrepreneurial Pitch Competition aimed at tackling food insecurity across university campuses.</p>
+                                <a href="https://www.canva.com/design/DAFpgW2gQ6w/L6kslHLRCalEjnCyXxL5FQ/view?utm_content=DAFpgW2gQ6w&utm_campaign=designshare&utm_medium=link&utm_source=editor" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="project-link">View Pitch Deck</a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="analystchallenge.jpg" alt="Analyst Challenge Project">
+                            </div>
+                            <div class="project-content">
+                                <h3>Analyst Challenge - Data Analysis Pitch Competition</h3>
+                                <p class="project-meta"> First Place Winner | Sept 27th, 2024 - Oct 4th, 2024</p>
+                                <p>Won first place in a data-based pitch challenge, by designing a smart city structure for North Oshawa inspired by Google's Sidewalk Labs, demonstrating skills in data interpretation, problem-solving, and pitching.</p>
+                                <a href="https://www.canva.com/design/DAGSd4y4saE/LnGe6c_dBsWWtjuSubD2IA/view?utm_content=DAGSd4y4saE&utm_campaign=designshare&utm_medium=link&utm_source=editor" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="project-link">View Pitch Deck</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="prev" aria-label="Previous project">&#8249;</button>
+                        <button class="next" aria-label="Next project">&#8250;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="arrow left-arrow" onclick="changeExperience(-1)">&#10094;</div>
-        <div class="arrow right-arrow" onclick="changeExperience(1)">&#10095;</div>
-    </section>
-    
+        <section id="interests" class="card">
+            <div class="container">
+                <h2>When I'm not working or studying, you'll find me...</h2>
+                <div class="section-content">
+                    <div class="horizontal-line"></div>
+                    <div class="food-intro">
+                        <p>Trying out new restaurants and food with friends (and taking pictures of course!) 📸 🍽️</p>
+                    </div>
+                    <div class="food-collage">
+                        <img src="food1.JPG" alt="Food image 1" class="food-img img1">
+                        <img src="food2.JPG" alt="Food image 2" class="food-img img2">
+                        <img src="food3.jpg" alt="Food image 3" class="food-img img3">
+                        <img src="food4.jpg" alt="Food image 4" class="food-img img4">
+                        <img src="food5.jpeg" alt="Food image 5" class="food-img img5">
+                        <img src="food6.jpg" alt="Food image 6" class="food-img img6">
+                        <img src="food7.jpeg" alt="Food image 7" class="food-img img7">
+                        <img src="food8.jpeg" alt="Food image 8" class="food-img img8">
+                        <img src="food9.jpeg" alt="Food image 9" class="food-img img9">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>made with love, by anupriya <3</p>
+    </footer>
+
     <script src="script.js"></script>
-
-    <section id="project-section"></section>
-        <h1>PROJECTS AND ACTIVITIES</h1>
-
-    </section>
-    
-    
-
 </body>
 </html>
